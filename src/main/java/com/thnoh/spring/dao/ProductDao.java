@@ -3,9 +3,12 @@ package com.thnoh.spring.dao;
 import com.thnoh.spring.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -18,13 +21,24 @@ public class ProductDao {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public int getRowCount() {
-        String sqlStatement = "select count(*) from offers";
-        return jdbcTemplate.queryForObject(sqlStatement, Integer.class);
-    }
-
     public List<Product> getProducts() {
 
-        return null;
+        String sqlStatement = "select * from product";
+
+        return jdbcTemplate.query(sqlStatement, new RowMapper<Product>() { //record -> object
+
+            public Product mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+                Product product = new Product();
+
+                product.setId(resultSet.getInt("id"));
+                product.setName(resultSet.getString("name"));
+                product.setCategory(resultSet.getString("category"));
+                product.setManufacturer(resultSet.getString("manufacturer"));
+                product.setUnitInStock(resultSet.getInt("unitInStock"));
+                product.setDescription(resultSet.getString("description"));
+
+                return product;
+            }
+        });
     }
 }

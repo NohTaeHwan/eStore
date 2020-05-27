@@ -5,8 +5,8 @@
   Time: 16:51
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 
@@ -42,6 +42,7 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="<c:url value="/resource/css/carousel.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resource/css/main.css"/>" rel="stylesheet">
 </head>
 
 <body>
@@ -55,10 +56,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<c:url value="/"/>"> Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="<c:url value="/products"/>">Products</a> <!-- product menu -->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

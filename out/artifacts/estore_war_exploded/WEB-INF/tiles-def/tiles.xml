@@ -10,6 +10,7 @@
         <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
     </definition>
 
+    <!-- 여기서 definition name이랑 view의 파일명이 같아야함.. 이걸 몰랐네-->
     <definition name="index" extends="base">
         <put-attribute name="title" value="My eStore homepage" />
         <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
@@ -18,6 +19,16 @@
     <definition name="products" extends="base">
         <put-attribute name="title" value="Products page" />
         <put-attribute name="body" value="/WEB-INF/views/products.jsp" />
+    </definition>
+
+    <definition name="admin" extends="base">
+        <put-attribute name="title" value="Administrator page" />
+        <put-attribute name="body" value="/WEB-INF/views/admin.jsp" />
+    </definition>
+
+    <definition name="productInventory" extends="base">
+        <put-attribute name="title" value="Product Inventory page" />
+        <put-attribute name="body" value="/WEB-INF/views/productInventory.jsp" />
     </definition>
 
 </tiles-definitions>

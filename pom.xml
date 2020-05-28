@@ -67,6 +67,14 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-extras-->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-extras</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+
+
 
 
     </dependencies>

@@ -36,9 +36,26 @@ public class ProductDao {
                 product.setManufacturer(resultSet.getString("manufacturer"));
                 product.setUnitInStock(resultSet.getInt("unitInStock"));
                 product.setDescription(resultSet.getString("description"));
+                product.setPrice(resultSet.getInt("price"));
 
                 return product;
             }
         });
+    }
+
+    public boolean addProduct(Product product) {
+
+        String name = product.getName();
+        String category = product.getCategory();
+        String description = product.getDescription();
+        int price = product.getPrice();
+        int unitInStock = product.getUnitInStock();
+        String manufacturer = product.getManufacturer();
+
+        String sqlStatement = "insert into product (name,category,price,manufacturer,unitInStock,description) "
+                + "values (?,?,?,?,?,?) ";
+
+        return (jdbcTemplate.update(sqlStatement,new Object[]{name,category,price,manufacturer,unitInStock,description})==1);
+
     }
 }

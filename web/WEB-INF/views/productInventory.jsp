@@ -37,5 +37,7 @@
             </c:forEach>
             </tbody>
         </table>
+
+        <a href="<c:url value="/admin/productInventory/addProduct"/>" class="btn btn-primary"> Add Product </a>
     </div><!-- product table div-->
 </div><!-- container wraaper div-->

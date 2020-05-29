@@ -54,8 +54,9 @@
     <link href="<c:url value="/resource/css/carousel.css"/>" rel="stylesheet">
     <link href="<c:url value="/resource/css/main.css"/>" rel="stylesheet">
 
-    <!-- font awesome CDN-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- font awesome ver.5 CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css"><!-- ver.4 shim (allow to use ver.4) -->
 </head>
 
 <body>

@@ -50,8 +50,8 @@
                 <sf:input path="manufacturer" id="manufacturer" class="form-control"/>
             </div>
 
-            <input type="submit" value="submit" class="btn btn-default">
-            <a href="<c:url value="/admin/productInventory"/>" class="btn btn-default">Cancel</a>
+            <input type="submit" value="submit" class="btn btn-primary">
+            <a href="<c:url value="/admin/productInventory"/>" class="btn btn-dark">Cancel</a>
         </sf:form>
         <br/>
     </div>

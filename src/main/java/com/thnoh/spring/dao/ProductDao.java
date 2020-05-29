@@ -16,6 +16,26 @@ public class ProductDao {
 
     private JdbcTemplate jdbcTemplate;
 
+    //Row Mapper for Get product.
+    private RowMapper<Product> getRowMapper = new RowMapper<Product>() { //record -> object
+
+        public Product mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+            Product product = new Product();
+
+            product.setId(resultSet.getInt("id"));
+            product.setName(resultSet.getString("name"));
+            product.setCategory(resultSet.getString("category"));
+            product.setManufacturer(resultSet.getString("manufacturer"));
+            product.setUnitInStock(resultSet.getInt("unitInStock"));
+            product.setDescription(resultSet.getString("description"));
+            product.setPrice(resultSet.getInt("price"));
+
+            return product;
+        }
+    };
+
+
+
     @Autowired
     public void setDataSource(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
@@ -25,23 +45,16 @@ public class ProductDao {
 
         String sqlStatement = "select * from product";
 
-        return jdbcTemplate.query(sqlStatement, new RowMapper<Product>() { //record -> object
-
-            public Product mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-                Product product = new Product();
-
-                product.setId(resultSet.getInt("id"));
-                product.setName(resultSet.getString("name"));
-                product.setCategory(resultSet.getString("category"));
-                product.setManufacturer(resultSet.getString("manufacturer"));
-                product.setUnitInStock(resultSet.getInt("unitInStock"));
-                product.setDescription(resultSet.getString("description"));
-                product.setPrice(resultSet.getInt("price"));
-
-                return product;
-            }
-        });
+        return jdbcTemplate.query(sqlStatement, getRowMapper);
     }
+
+    public Product getProductById(int id) {
+
+        String sqlStatement = "select * from product where id=?";
+
+        return jdbcTemplate.queryForObject(sqlStatement, new Object[]{id}, getRowMapper);
+    }
+
 
     public boolean addProduct(Product product) {
 
@@ -64,5 +77,23 @@ public class ProductDao {
         String sqlStatement = "delete from product where id=?";
 
         return (jdbcTemplate.update(sqlStatement,new Object[]{id})==1);
+    }
+
+
+    public boolean updateProduct(Product product) {
+
+        int id = product.getId();
+        String name = product.getName();
+        String category = product.getCategory();
+        String description = product.getDescription();
+        int price = product.getPrice();
+        int unitInStock = product.getUnitInStock();
+        String manufacturer = product.getManufacturer();
+
+        String sqlStatement = "update product set name=?, category=?, price=?, manufacturer=?, unitInStock=?, description=? where id=?";
+
+
+        return (jdbcTemplate.update(sqlStatement,new Object[]{name,category,price,manufacturer,unitInStock,description,id})==1);
+
     }
 }

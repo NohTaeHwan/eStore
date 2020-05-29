@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: taehwan
   Date: 2020-05-29
-  Time: 14:33
+  Time: 16:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,12 +11,16 @@
 
 <div class="container-wrapper">
     <div class="container">
-        <h1>Add Product</h1>
+        <h1>Update Product</h1>
 
-        <p class="lead">Fill the below information to add a product : </p>
+        <p class="lead">Fill the below information to update a product : </p>
 
-        <sf:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct"
-            method="post" modelAttribute="product">
+
+        <sf:form action="${pageContext.request.contextPath}/admin/productInventory/updateProduct"
+                 method="post" modelAttribute="product">
+
+            <!-- update 시에는 id값을 따로 바인딩해줘야함.그래야 맞는 id로 update가능 -->
+            <sf:hidden path="id"/>
 
             <div class="form-group">
                 <label for="name">Name</label>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="base" template="/WEB-INF/templates/layout.jsp">
+        <put-attribute name="title" value="eStore homepage" />
+        <put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+    </definition>
+
+    <!-- 여기서 definition name이랑 view의 파일명이 같아야함.. 이걸 몰랐네-->
+    <definition name="index" extends="base">
+        <put-attribute name="title" value="My eStore homepage" />
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+    </definition>
+
+    <definition name="products" extends="base">
+        <put-attribute name="title" value="Products page" />
+        <put-attribute name="body" value="/WEB-INF/views/products.jsp" />
+    </definition>
+
+    <definition name="admin" extends="base">
+        <put-attribute name="title" value="Administrator page" />
+        <put-attribute name="body" value="/WEB-INF/views/admin.jsp" />
+    </definition>
+
+    <definition name="productInventory" extends="base">
+        <put-attribute name="title" value="Product Inventory page" />
+        <put-attribute name="body" value="/WEB-INF/views/productInventory.jsp" />
+    </definition>
+
+    <definition name="addProduct" extends="base">
+        <put-attribute name="title" value="product add page" />
+        <put-attribute name="body" value="/WEB-INF/views/addProduct.jsp" />
+    </definition>
+
+    <definition name="updateProduct" extends="base">
+        <put-attribute name="title" value="product update page" />
+        <put-attribute name="body" value="/WEB-INF/views/updateProduct.jsp" />
+    </definition>
+
+</tiles-definitions>

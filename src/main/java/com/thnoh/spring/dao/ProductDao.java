@@ -20,6 +20,7 @@ public class ProductDao {
     private RowMapper<Product> getRowMapper = new RowMapper<Product>() { //record -> object
 
         public Product mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+
             Product product = new Product();
 
             product.setId(resultSet.getInt("id"));

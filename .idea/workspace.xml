@@ -7,28 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04c2801b-dee7-4228-a09b-3cdad43a1181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/views/updateProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/updateProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/dao/ProductDao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/dao/ProductDao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/classes/com/thnoh/spring/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/templates/layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/templates/layout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/tiles-def/tiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/tiles-def/tiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/views/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/views/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/views/productInventory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/estore_war_exploded/WEB-INF/views/productInventory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thnoh/spring/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thnoh/spring/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thnoh/spring/dao/ProductDao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thnoh/spring/dao/ProductDao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thnoh/spring/dao/ProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thnoh/spring/dao/ProductDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thnoh/spring/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thnoh/spring/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/layout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/addProduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/productInventory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/productInventory.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,13 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="76" column="79" lean-forward="true" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+            <state>
+              <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
                 <element signature="e#695#696#0" expanded="true" />
               </folding>
             </state>
@@ -54,19 +35,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/addProduct.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="57" selection-end-column="6" />
+            <state relative-caret-position="450">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+            <state relative-caret-position="630">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,16 +59,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="77" lean-forward="true" selection-start-line="76" selection-start-column="63" selection-end-line="77" />
+            <state relative-caret-position="195">
+              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#552#1221#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/products.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -102,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -111,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/layout.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+            <state relative-caret-position="885">
+              <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -121,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+              <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -130,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/updateProduct.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="37" column="60" lean-forward="true" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+              <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -138,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/productInventory.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="210">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -192,9 +172,9 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/views/addProduct.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/views/updateProduct.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java" />
       </list>
     </option>
   </component>
@@ -225,18 +205,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="estore" type="b2602c69:ProjectViewProjectNode" />
               <item name="estore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estore" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estore" type="b2602c69:ProjectViewProjectNode" />
@@ -297,35 +271,7 @@
               <item name="estore" type="b2602c69:ProjectViewProjectNode" />
               <item name="estore" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estore" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estore" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="props" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estore" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="estore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="estore" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="estore" type="b2602c69:ProjectViewProjectNode" />
@@ -356,6 +302,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,7 +312,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590738862637" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590739001485" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -499,18 +446,19 @@
       <workItem from="1590561595543" duration="6037000" />
       <workItem from="1590643119748" duration="5917000" />
       <workItem from="1590649960381" duration="3875000" />
-      <workItem from="1590665923248" duration="12764000" />
+      <workItem from="1590665923248" duration="12948000" />
+      <workItem from="1590748316152" duration="922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45831000" />
+    <option name="totallyTimeSpent" value="46937000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1792" height="1120" extended-state="6" />
+    <frame x="0" y="0" width="1792" height="1120" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987593" visible="true" weight="0.14914286" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987593" visible="true" weight="0.15085714" />
       <window_info id="Structure" order="1" sideWeight="0.5012407" side_tool="true" weight="0.14742857" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -518,10 +466,9 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Duplicate detector" weight="0.3295238" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22285715" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22285715" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -535,6 +482,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Duplicate detector" order="16" weight="0.3295238" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -559,16 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,41 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/layout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/products.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="43" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/productInventory.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/addProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -712,44 +615,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="77" lean-forward="true" selection-start-line="76" selection-start-column="63" selection-end-line="77" />
+        <state relative-caret-position="450">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#552#1221#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/products.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tiles-def/tiles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/productInventory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/updateProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="60" lean-forward="true" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/service/ProductService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        <state>
+          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thnoh/spring/dao/ProductDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="76" column="79" lean-forward="true" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+        <state relative-caret-position="630">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
           </folding>
         </state>
       </provider>

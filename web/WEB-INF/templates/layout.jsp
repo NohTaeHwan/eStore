@@ -53,6 +53,9 @@
     <!-- Custom styles for this template -->
     <link href="<c:url value="/resource/css/carousel.css"/>" rel="stylesheet">
     <link href="<c:url value="/resource/css/main.css"/>" rel="stylesheet">
+
+    <!-- font awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>

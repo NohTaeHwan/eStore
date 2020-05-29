@@ -58,4 +58,11 @@ public class ProductDao {
         return (jdbcTemplate.update(sqlStatement,new Object[]{name,category,price,manufacturer,unitInStock,description})==1);
 
     }
+
+    public boolean deleteProduct(int id) {
+
+        String sqlStatement = "delete from product where id=?";
+
+        return (jdbcTemplate.update(sqlStatement,new Object[]{id})==1);
+    }
 }

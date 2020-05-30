@@ -27,6 +27,7 @@ public class Product {
 
     @Min(value = 0, message = "The Product stock must not be under zero")
     private int unitInStock;
+
     private String description;
 
 

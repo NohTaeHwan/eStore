@@ -19,7 +19,7 @@ import java.util.List;
  *
  * 관리자 페이지 , 제품 관리 담당
  *
- * TODO update , delete , add에서 method를 Put , delete , post로 하는 방법을 찾아서 수정.
+ * TODO (update , delete , add)에서 method를 Put , delete , post로 하는 방법을 찾아서 수정.
  */
 
 @Controller

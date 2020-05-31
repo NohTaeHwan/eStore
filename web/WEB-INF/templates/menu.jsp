@@ -27,9 +27,34 @@
                     <a class="nav-link" href="<c:url value="/products"/>">Products</a> <!-- product menu -->
                 </li>
 
+                <%--
                 <li class="nav-item">
                     <a class="nav-link" href="<c:url value="/admin"/>">Admin</a> <!-- admin menu -->
-                </li>
+                </li> --%>
+
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<c:url value="/admin"/>">Admin Page</a>
+                        </li>
+
+                    </c:if>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:document.getElementById('logout').submit()">Logout</a>
+                    </li>
+
+                    <form id="logout" action="<c:url value="/logout"/>" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
+
+                </c:if>
+
+                <c:if test="${pageContext.request.userPrincipal.name == null}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<c:url value="/login"/>">Login</a>
+                    </li>
+                </c:if>
 
             </ul>
             <form class="form-inline mt-2 mt-md-0">

@@ -1,100 +1,70 @@
 package com.thnoh.spring.dao;
 
 import com.thnoh.spring.model.Product;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.List;
 
+/**
+ * class : ProductDao
+ *
+ * DB : mysql
+ * ORM : Hibernate 5
+ *
+ */
+
 @Repository
+@Transactional
 public class ProductDao {
 
-    private JdbcTemplate jdbcTemplate;
-
-    //Row Mapper for Get product.
-    private RowMapper<Product> getRowMapper = new RowMapper<Product>() { //record -> object
-
-        public Product mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-
-            Product product = new Product();
-
-            product.setId(resultSet.getInt("id"));
-            product.setName(resultSet.getString("name"));
-            product.setCategory(resultSet.getString("category"));
-            product.setManufacturer(resultSet.getString("manufacturer"));
-            product.setUnitInStock(resultSet.getInt("unitInStock"));
-            product.setDescription(resultSet.getString("description"));
-            product.setPrice(resultSet.getInt("price"));
-
-            return product;
-        }
-    };
-
-
-
     @Autowired
-    public void setDataSource(DataSource dataSource) {
-        jdbcTemplate = new JdbcTemplate(dataSource);
-    }
+    private SessionFactory sessionFactory;
 
-    public List<Product> getProducts() {
-
-        String sqlStatement = "select * from product";
-
-        return jdbcTemplate.query(sqlStatement, getRowMapper);
-    }
 
     public Product getProductById(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Product product = session.get(Product.class,id);
 
-        String sqlStatement = "select * from product where id=?";
-
-        return jdbcTemplate.queryForObject(sqlStatement, new Object[]{id}, getRowMapper);
+        return product;
     }
 
+    @SuppressWarnings("unchecked")
+    public List<Product> getProducts() {
 
-    public boolean addProduct(Product product) {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("from Product");
+        List<Product> productList = query.list();
 
-        String name = product.getName();
-        String category = product.getCategory();
-        String description = product.getDescription();
-        int price = product.getPrice();
-        int unitInStock = product.getUnitInStock();
-        String manufacturer = product.getManufacturer();
-
-        String sqlStatement = "insert into product (name,category,price,manufacturer,unitInStock,description) "
-                + "values (?,?,?,?,?,?) ";
-
-        return (jdbcTemplate.update(sqlStatement,new Object[]{name,category,price,manufacturer,unitInStock,description})==1);
+        return productList;
 
     }
 
-    public boolean deleteProduct(int id) {
+    public void addProduct(Product product) {
 
-        String sqlStatement = "delete from product where id=?";
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(product);
+        session.flush();
 
-        return (jdbcTemplate.update(sqlStatement,new Object[]{id})==1);
+    }
+
+    public void deleteProduct(Product product) {
+
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(product);
+        session.flush();
     }
 
 
-    public boolean updateProduct(Product product) {
+    public void updateProduct(Product product) {
 
-        int id = product.getId();
-        String name = product.getName();
-        String category = product.getCategory();
-        String description = product.getDescription();
-        int price = product.getPrice();
-        int unitInStock = product.getUnitInStock();
-        String manufacturer = product.getManufacturer();
-
-        String sqlStatement = "update product set name=?, category=?, price=?, manufacturer=?, unitInStock=?, description=? where id=?";
-
-
-        return (jdbcTemplate.update(sqlStatement,new Object[]{name,category,price,manufacturer,unitInStock,description,id})==1);
-
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(product);
+        session.flush();
     }
 }

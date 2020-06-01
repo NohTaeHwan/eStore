@@ -78,9 +78,7 @@ public class AdminController {
             return "addProduct";
         }
 
-        if (!productService.addProduct(product))
-            System.out.println("Adding product fail");
-
+        productService.addProduct(product);
 
         return "redirect:/admin/productInventory";
         //redirect를 넣는 이유 : model에 아직 product가 들어가지 않았기 때문에 다시 productInventory에 해당하는 getProducts()를 호출해서 add된 product도 볼 수 있게하기 위함.
@@ -89,8 +87,9 @@ public class AdminController {
     @RequestMapping(value="/productInventory/deleteProduct/{id}") // method => get? delete?
     public String deleteProduct(@PathVariable int id){
 
-        if( !productService.deleteProduct(id))
-            System.out.println("delete product fail");
+        Product product = productService.getProductById(id);
+
+        productService.deleteProduct(product);
 
         return "redirect:/admin/productInventory";
     }
@@ -119,9 +118,7 @@ public class AdminController {
             return "updateProduct";
         }
 
-
-        if( !productService.updateProduct(product))
-            System.out.println("update product fail");
+        productService.updateProduct(product);
 
         return "redirect:/admin/productInventory";
     }

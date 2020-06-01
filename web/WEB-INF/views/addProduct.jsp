@@ -29,6 +29,7 @@
                 <sf:radiobutton path="category" id="category" value="컴퓨터"/> 컴퓨터
                 <sf:radiobutton path="category" id="category" value="가전"/> 가전
                 <sf:radiobutton path="category" id="category" value="잡화"/> 잡화
+                <sf:radiobutton path="category" id="category" value="자동차"/> 자동차
             </div>
 
             <div class="form-group">

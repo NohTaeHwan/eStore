@@ -3,6 +3,7 @@ package com.thnoh.spring.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -36,5 +37,9 @@ public class Product {
 
     private String description;
 
+    @Transient
+    private MultipartFile productImage;
+
+    private String imageFilename;
 
 }

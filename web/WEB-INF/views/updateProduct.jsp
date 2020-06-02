@@ -16,8 +16,8 @@
         <p class="lead">Fill the below information to update a product : </p>
 
 
-        <sf:form action="${pageContext.request.contextPath}/admin/productInventory/updateProduct"
-                 method="post" modelAttribute="product">
+        <sf:form action="${pageContext.request.contextPath}/admin/productInventory/updateProduct?${_csrf.parameterName}=${_csrf.token}"
+                 method="post" modelAttribute="product" enctype="multipart/form-data">
 
             <!-- update 시에는 id값을 따로 바인딩해줘야함.그래야 맞는 id로 update가능 -->
             <sf:hidden path="id"/>
@@ -57,6 +57,11 @@
                 <label for="manufacturer">Manufacturer</label>
                 <sf:input path="manufacturer" id="manufacturer" class="form-control"/>
                 <sf:errors path="manufacturer" cssStyle="color:#ff0000;"/>
+            </div>
+
+            <div class="form-group">
+                <label for="productImage">Upload picture</label>
+                <sf:input path="productImage" id="productImage" type="file" class="form-control"/>
             </div>
 
             <input type="submit" value="submit" class="btn btn-primary">

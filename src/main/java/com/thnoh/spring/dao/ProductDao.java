@@ -16,7 +16,6 @@ import java.util.List;
  *
  * DB : mysql
  * ORM : Hibernate 5
- *
  */
 
 @Repository

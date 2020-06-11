@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: taehwan
-  Date: 2020-05-27
-  Time: 15:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -23,19 +16,25 @@
                     <th>Manufacturer</th>
                     <th>UnitInStock</th>
                     <th>Description</th>
+                    <th>Detail</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach var="product" items="${products}">
                     <tr>
                         <td> <img src="<c:url value="/resource/images/${product.imageFilename}"/>"
-                                  alt="image" style="width: 100%;"/> </td>
+                                  alt="image" style="width: 60%;"/> </td>
                         <td> ${product.name} </td>
                         <td> ${product.category} </td>
                         <td> ${product.price} </td>
                         <td> ${product.manufacturer} </td>
                         <td> ${product.unitInStock} </td>
                         <td> ${product.description} </td>
+                        <td>
+                            <a href="<c:url value="/viewProduct/${product.id}"/>">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>

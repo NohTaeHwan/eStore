@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: taehwan
-  Date: 2020-05-28
-  Time: 15:42
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- menu -->
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
+        <a class="navbar-brand" href="<c:url value="/"/>">estore</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,6 +46,10 @@
                 <c:if test="${pageContext.request.userPrincipal.name == null}">
                     <li class="nav-item">
                         <a class="nav-link" href="<c:url value="/login"/>">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<c:url value="/register"/>">Register</a>
                     </li>
                 </c:if>
 

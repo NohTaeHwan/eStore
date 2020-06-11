@@ -7,6 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/***
+ * Class : ProductService
+ * Service Layer
+ *
+ * @Autowired : ProductDao
+ */
+
 @Service
 public class ProductService {
 

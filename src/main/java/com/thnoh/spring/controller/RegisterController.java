@@ -59,7 +59,6 @@ public class RegisterController {
 
         userService.addUser(user);
 
-
         return "registerUserSuccess";
     }
 

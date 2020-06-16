@@ -1,5 +1,6 @@
 package com.thnoh.spring.controller;
 
+import com.thnoh.spring.model.Cart;
 import com.thnoh.spring.model.ShippingAddress;
 import com.thnoh.spring.model.User;
 import com.thnoh.spring.service.UserService;
@@ -56,6 +57,9 @@ public class RegisterController {
             user.setAuthority("ROLE_ADMIN");
         else
             user.setAuthority("ROLE_USER");
+
+        Cart cart = new Cart();
+        user.setCart(cart);
 
         userService.addUser(user);
 

@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
-<script src="<c:url value="/resource/js/controller.js"/>"></script>
+<script src="<c:url value="/resource/js/cartController.js"/>"></script>
 
 <div class="container-wrapper">
     <div class="container">

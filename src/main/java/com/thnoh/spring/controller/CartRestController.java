@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * class : CartRestController
  *
- * 장바구니 처리 controller
+ * 장바구니 CRUD 처리 controller
  *
  */
 @RestController

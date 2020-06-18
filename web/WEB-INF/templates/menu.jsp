@@ -33,6 +33,13 @@
 
                     </c:if>
 
+                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="<c:url value="/cart"/>">Cart</a>
+                        </li>
+
+                    </c:if>
+
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:document.getElementById('logout').submit()">Logout</a>
                     </li>

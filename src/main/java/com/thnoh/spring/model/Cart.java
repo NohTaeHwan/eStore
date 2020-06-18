@@ -28,5 +28,6 @@ public class Cart implements Serializable {
     @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL,fetch = FetchType.EAGER )//원래는 eager 말고 lazy가 디폴트
     private List<CartItem> cartItems = new ArrayList<CartItem>();
 
+    //별로 필요없는 필드.
     private double grandTotal;
 }

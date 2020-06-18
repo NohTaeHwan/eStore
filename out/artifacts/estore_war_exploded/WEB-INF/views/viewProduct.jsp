@@ -25,21 +25,21 @@
                 <p><strong>Price : </strong> ${product.price}</p>
 
                 <br/>
+                <p>
+                    <a href="<c:url value="/products"/>" class="btn btn-danger">Back</a>
+                    <c:if test="${pageContext.request.userPrincipal.name != 'admin' and pageContext.request.userPrincipal.name != null }">
 
-                <c:if test="${pageContext.request.userPrincipal.name != null}">
-                    <p>
-                        <a href="<c:url value="/products"/>" class="btn btn-danger">Back</a>
+                            <button class="btn btn-warning btn-large" ng-click="addToCart('${product.id}')">
+                                <i class="fa fa-shopping-cart"></i>Order Now
+                            </button>
 
-                        <button class="btn btn-warning btn-large" ng-click="addToCart('${product.id}')">
-                            <i class="fa fa-shopping-cart"></i>Order Now
-                        </button>
+                            <a href="<c:url value="/cart"/>" class="btn btn-info">
+                                <i class="fa fa-eye"></i> View Cart
+                            </a>
 
-                        <a href="<c:url value="/cart"/>" class="btn btn-info">
-                            <i class="fa fa-eye"></i> View Cart
-                        </a>
-                    </p>
 
-                </c:if>
+                    </c:if>
+                </p>
             </div>
 
         </div>

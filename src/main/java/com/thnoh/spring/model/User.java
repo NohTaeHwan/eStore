@@ -31,7 +31,7 @@ public class User {
     private String email;
 
     @OneToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(unique = true)
+    @JoinColumn(unique = true, name="shippingAddress")
     private ShippingAddress shippingAddress;
 
     @OneToOne(optional = false, cascade = CascadeType.ALL)

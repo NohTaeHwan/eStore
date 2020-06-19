@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 <label for="username">아이디</label>
-                <span style="color:#ff0000">${usernameMsg}</span>
+                <span style="color:#ff0000">${usernameMsg}</span><!-- 아이디 중복 체크-->
                 <sf:input path="username" id="username" class="form-control"/>
                 <sf:errors path="username" cssStyle="color: #ff0000"/>
             </div>
@@ -39,16 +39,19 @@
             <div class="form-group">
                 <label for="shippingStreet">주소</label>
                 <sf:input path="shippingAddress.address" id="shippingStreet" class="form-control"/>
+                <!-- <sf:errors path="shippingAddress.address" cssStyle="color: #ff0000"/> -->
             </div>
 
             <div class="form-group">
                 <label for="shippingCountry">국가</label>
                 <sf:input path="shippingAddress.country" id="shippingCountry" class="form-control"/>
+                <!--  <sf:errors path="shippingAddress.country" cssStyle="color: #ff0000"/> -->
             </div>
 
             <div class="form-group">
                 <label for="shippingZip">우편번호</label>
                 <sf:input path="shippingAddress.zipCode" id="shippingZip" class="form-control"/>
+                <!--  <sf:errors path="shippingAddress.zipCode" cssStyle="color: #ff0000"/> -->
             </div>
 
             <br/>

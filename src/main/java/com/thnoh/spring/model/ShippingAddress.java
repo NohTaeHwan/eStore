@@ -6,12 +6,14 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @Entity
+@Table(name = "shippingAddress")
 public class ShippingAddress {
 
     @Id
@@ -19,8 +21,13 @@ public class ShippingAddress {
     @Column(name = "shippingAddress_id")
     private int id;
 
+    //@NotEmpty(message = "address must not be null")
     private String address;
+
+    //@NotEmpty(message = "country must not be null")
     private String country;
+
+    //@NotEmpty(message = "zipCode must not be null")
     private String zipCode;
 
 }

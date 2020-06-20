@@ -12,6 +12,7 @@ cartApp.controller("cartCtrl",function ($scope, $http) {
     $scope.refreshCart = function () {
         $http.get('/estore/api/cart/' + $scope.cartId).then(
           function successCallback(response){
+              console.log(response.data);
               $scope.cart = response.data;
           });
     };

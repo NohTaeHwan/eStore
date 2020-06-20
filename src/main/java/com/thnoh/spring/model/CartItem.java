@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@ToString
+//@ToString
 @NoArgsConstructor
 @Entity
 public class CartItem implements Serializable {

@@ -58,7 +58,7 @@ public class CartRestController {
     @RequestMapping(value = "/{cartId}" , method = RequestMethod.GET)
     public ResponseEntity<Cart> getCartById (@PathVariable(value = "cartId") int cartId){
         Cart cart = cartService.getCartById(cartId);
-        return new ResponseEntity<Cart>(cart, HttpStatus.OK);
+        return new ResponseEntity<>(cart, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{cartId}",method = RequestMethod.DELETE)
@@ -67,7 +67,7 @@ public class CartRestController {
 
         cartItemService.removeAllCartItems(cart);
 
-        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
     }
 
@@ -90,7 +90,7 @@ public class CartRestController {
                 item.setTotalPrice(product.getPrice() * item.getQuantity());
                 cartItemService.addCartItem(item);
 
-                return new ResponseEntity<Void>(HttpStatus.OK);
+                return new ResponseEntity<>(HttpStatus.OK);
 
             }
 
@@ -107,7 +107,7 @@ public class CartRestController {
         cart.getCartItems().add(cartItem);
 
         cartItemService.addCartItem(cartItem);
-        return new ResponseEntity<Void>(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
@@ -120,7 +120,7 @@ public class CartRestController {
         CartItem cartItem = cartItemService.getCartItemByProductId(cart.getId(),productId);
         cartItemService.removeCartItem(cartItem);
 
-        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
     }
 

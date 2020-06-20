@@ -28,13 +28,6 @@ public class UserAdminController {
 
         List<User> users = userService.getAllUsers();
 
-        //유저 목록에서 admin 권한을 가진 아이디는 배제
-        for(User user : users){
-            if(user.getAuthority().equals("ROLE_ADMIN")){
-                users.remove(user);
-            }
-        }
-
         model.addAttribute("users",users);
 
         return "userAdmin";

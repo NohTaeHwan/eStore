@@ -14,15 +14,14 @@
 
 
 ## Overview
-Spring Framework를 이용하여 만든 쇼핑몰 웹 서비스 입니다. estore는 Spring mvc를 프레임워크로 이용하였으며 DB는 mysql , ORM으로 hibernate를 이용하였습니다. Rest Api를 이용하여 서버 처리를 하였습니다. 프론트엔드 프레임워크로 AngularJs를 사용했습니다. Bootstrap을 이용하여 웹 페이지를 디자인 하였습니다. 로그인 기능을 넣어 관리자와 일반 유저의 권한을 분리하였습니다. 일반 유저는 제품 조회 , 제품 상세 조회 ,장바구니 기능 사용 가능 합니다.
-관리자는 제품 등록 ,수정 ,삭제 ,조회 등의 기능을 모두 이용할 수 있습니다. 
+Spring Framework를 이용하여 만든 쇼핑몰 웹 서비스 입니다. estore는 Spring mvc를 프레임워크로 이용하였으며 DB는 mysql , ORM으로 hibernate를 이용하였습니다. Rest Api를 이용하여 서버 처리를 하였습니다. 프론트엔드 프레임워크로 AngularJs를 사용했습니다. Bootstrap을 이용하여 웹 페이지를 디자인 하였습니다. 로그인 기능을 넣어 관리자와 일반 유저의 권한을 분리하였습니다. 일반 유저는 제품 조회 , 제품 상세 조회 ,장바구니 기능 사용 가능 합니다. 관리자는 제품 등록 ,수정 ,삭제 ,조회 등의 기능을 모두 이용할 수 있습니다. 또한 관리자는 유저들의 목록을 관리할 수 있습니다.
 
 
 
 
 ## Project info
 
-version : ver 1.2
+version : ver 1.3
 
 #### 사용 기술 및 라이브러리
 - JDK 1.8
@@ -64,6 +63,8 @@ estore
 │   │                   │   ├── LoginController.java
 │   │                   │   └── ProductController.java
 │   │                   │   └── RegisterController.java
+│   │                   │   ├── UserAdminController.java
+│   │                   │   └── UserRestController.java
 │   │                   ├── dao
 │   │                   │   ├── CartDao.java
 │   │                   │   ├── CartItemDao.java
@@ -109,6 +110,7 @@ estore
     │   │   └── registerUser.jsp
     │   │   └── registerUserSuccess.jsp
     │   │   └── viewProduct.jsp
+    │   │   ├── userAdmin.jsp
     │   └── web.xml
     └── resource
         ├── css
@@ -124,7 +126,7 @@ estore
             ├── bootstrap.min.js
             └── bootstrap.min.js.map 
             └── cartController.js
-
+            └── userAdminController.js
 ```
 
 
@@ -136,13 +138,14 @@ estore
 유저
 - 제품 조회 : 제품들의 목록 조회
 - 제품 상세 정보 : 제품 목록에서 각 제품들의 상세 정보를 조회
-- 장바구니 : 구입하고자 하는 제품 장바구니 서비스 이용 가능 (v1.2)
+- 장바구니 : 구입하고자 하는 제품 장바구니 서비스 이용 가능 
 
 관리자
 - 제품 관리 페이지 : 제품을 등록 , 수정 , 삭제할 수 있는 제품 목록 페이지
 - 제품 등록 : spring form을 통해 제품 정보를 입력하여 새 제품 등록
 - 제품 수정 : spring form을 통해 제품 정보를 입력하여 제품 수정
 - 제품 삭제 : 선택한 제품을 삭제
+- 유저 관리 : 유저 목록 조회 , 유저 삭제 (v1.3)
 
 로그인 및 회원가입
 - 로그인 : spring security 이용하여 admin과 일반 유저로 사용 권한이 분리되도록 구성
@@ -172,6 +175,7 @@ estore
 - 제품 추가 : /admin/productInventory/addProduct
 - 제품 삭제 : /admin/productInventory/deleteProduct/:productId
 - 제품 업데이트 : /admin/productInventory/updateProduct/:productId
+- 유저 관리 페이지 : /admin/userAdmin (v1.3)
 
 로그인 및 회원가입
 
@@ -181,12 +185,17 @@ estore
 
 #### REST API
 
-장바구니(/api/cart) (v1.2)
+장바구니(/api/cart) 
 
 - 장바구니 조회 : GET /:cartId
 - 장바구니 제품 전체 삭제 : DELETE /:cartId
 - 장바구니 제품 삭제 : DELETE /cartitem/:productId
 - 장바구니에 제품 추가 : PUT /add/:productId
+
+유저 관리(/api/users) (v1.3)
+
+- 유저 목록 조회 : GET 
+- 유저 삭제 : DELETE /:userId
 
 
 
@@ -210,17 +219,17 @@ AngularJS Version : 1.8.0
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 ```
 
+<br/>
+
 #### Usage
-
-
 
 ##### 장바구니 ([cartController.js](https://github.com/NohTaeHwan/eStore/blob/master/web/resource/js/cartController.js))
 
-module : cartApp
+Module : cartApp
 
 Controller : cartCtrl
 
-Methods 
+Methods :
 
 - refreshCart (GET) : 장바구니 새로고침
 - clearCart(DELETE) : 장바구니 전체 삭제
@@ -231,10 +240,25 @@ Methods
 
 
 
+##### 유저관리 ([userAdminController.js](https://github.com/NohTaeHwan/eStore/blob/master/web/resource/js/userAdminController.js)) (v1.3)
+
+Module : userAdminApp
+
+Controller : userAdminCtrl
+
+Methods :
+
+- refreshUsers (GET) : 유저 목록 새로고침
+- removeUser(DELETE) : 유저 삭제
+- setCsrfToken : [layout.js](https://github.com/NohTaeHwan/eStore/blob/master/web/WEB-INF/templates/layout.jsp) meta 태그에 명시된 csrf 관련 내용을 설정.
+
+
+
+
+
 ## What's new?
 
-- Cart , CartItem 모델 추가.
-- 모델들 간의 관계 설정
-- 장바구니 기능 추가 (Cart)
-- 장바구니 기능에 Rest Api 적용
-- 장바구니 기능에 Angular JS 적용
+- 유저 관리 페이지 기능 추가
+- 유저 관리 기능에 REST API적용
+- 유저 관리 기능에 AngularJS 적용
+

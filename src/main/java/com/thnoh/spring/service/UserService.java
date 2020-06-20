@@ -35,4 +35,6 @@ public class UserService {
         return userDao.getAllUsers();
     }
 
+    public void deleteUser(User user) { userDao.deleteUser(user); }
+
 }

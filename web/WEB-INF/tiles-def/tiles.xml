@@ -31,6 +31,11 @@
         <put-attribute name="body" value="/WEB-INF/views/productInventory.jsp" />
     </definition>
 
+    <definition name="userAdmin" extends="base">
+        <put-attribute name="title" value="user admin page" />
+        <put-attribute name="body" value="/WEB-INF/views/userAdmin.jsp" />
+    </definition>
+
     <definition name="addProduct" extends="base">
         <put-attribute name="title" value="product add page" />
         <put-attribute name="body" value="/WEB-INF/views/addProduct.jsp" />
@@ -65,5 +70,7 @@
         <put-attribute name="title" value="cart page" />
         <put-attribute name="body" value="/WEB-INF/views/cart.jsp" />
     </definition>
+
+
 
 </tiles-definitions>

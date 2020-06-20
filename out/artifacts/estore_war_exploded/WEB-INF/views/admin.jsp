@@ -16,7 +16,7 @@
 
     <div class="container">
         <a href="<c:url value="/admin/productInventory"/>" class="btn btn-primary"> 제품 관리 </a>
-        <a href="#" class="btn btn-primary">회원 관리</a>
+        <a href="<c:url value="/admin/userAdmin"/>" class="btn btn-primary">회원 관리</a>
         <a href="<c:url value="/"/>" class="btn btn-dark">Back</a>
     </div> <!-- container.div-->
 

@@ -43,7 +43,7 @@ public class CartRestController {
     private ProductService productService;
 
     //현재 로그인한 username을 가져옴.
-    public String getPresentUser(){
+    private String getPresentUser(){
 
         Authentication authentication =
                 SecurityContextHolder.getContext().getAuthentication();
@@ -121,6 +121,28 @@ public class CartRestController {
         cartItemService.removeCartItem(cartItem);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+    }
+
+    @RequestMapping(value = "/plus/{productId}",method = RequestMethod.PUT)
+    public ResponseEntity<Void> plusQuantity(@PathVariable(value = "productId") int productId){
+
+        User user = userService.getUserByUsername(getPresentUser());
+        Cart cart = user.getCart();
+
+        CartItem cartItem = cartItemService.getCartItemByProductId(cart.getId(),productId);
+
+        //Quantity < unitInStock
+        if(cartItem.getQuantity() == productService.getProductById(productId).getUnitInStock()){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        }
+
+        cartItem.setQuantity(cartItem.getQuantity()+1);
+        cartItem.setTotalPrice(productService.getProductById(productId).getPrice() * cartItem.getQuantity());
+        cartItemService.addCartItem(cartItem);
+
+        return new ResponseEntity<>(HttpStatus.OK);
 
     }
 

@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <section class="container" ng-app="cartApp">
+        <section class="container" ng-app="cartApp" style="width: 105%">
           <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
               <a class="btn btn-warning pull-left" ng-click="clearCart()">
                   <i class="fa fa-trash"></i> Clear Cart
@@ -23,7 +23,7 @@
 
               <br/>
 
-              <table class="table table-hover">
+              <table class="table table-hover" >
                   <tr>
                       <th>Product</th>
                       <th>Unit Price</th>
@@ -37,15 +37,27 @@
                       <td>{{item.product.price}}</td>
                       <td>{{item.quantity}}</td>
                       <td>{{item.totalPrice}}</td>
-                      <td><a class="btn btn-danger" ng-click="removeFromCart(item.product.id)">
-                          <i class="fa fa-minus"></i>remove</a></td>
+                      <td>
+
+                          <div style="display: inline; color: white ">
+                              <a class="btn btn-danger" ng-click="removeFromCart(item.product.id)" style="font-size: x-small">
+                                  <i class="fa fa-times"></i>remove</a>
+
+                              <a class="btn btn-danger" ng-click="plusQuantity(item.product.id)" style="font-size: x-small">
+                                  <i class="fa fa-plus"></i>plus</a>
+
+                              <a class="btn btn-danger" style="font-size: x-small">
+                                  <i class="fa fa-minus"></i>minus</a>
+                          </div>
+
+                      </td>
                   </tr>
 
                   <tr>
                       <td></td>
                       <td></td>
                       <td>Grand Total</td>
-                      <td>{{calGrandTotal()}}</td>
+                      <td>{{calGrandTotal()}} 만원</td>
                       <td></td>
                   </tr>
               </table>

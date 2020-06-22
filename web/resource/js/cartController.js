@@ -69,6 +69,22 @@ cartApp.controller("cartCtrl",function ($scope, $http) {
         return grandTotal;
     };
 
+    $scope.plusQuantity = function(productId){
+
+        $scope.setCsrfToken();
+
+        $http({
+            method : 'PUT',
+            url : '/estore/api/cart/plus/' + productId
+        }).then(
+            function successCallback() {
+                $scope.refreshCart();
+            }).catch(function errorCallback(){
+                alert("주문 최대 수량!");
+        });
+    };
+
+
     //csrf (rest 서버에 보내지는 메소드들에 추가)
     $scope.setCsrfToken = function() {
         var csrfToken = $("meta[name='_csrf']").attr("content");

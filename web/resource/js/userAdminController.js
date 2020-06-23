@@ -40,6 +40,22 @@ userAdminApp.controller("userAdminCtrl", function ($scope,$http) {
             });
     };
 
+    $scope.clearUser = function (){
+
+        $scope.setCsrfToken();
+
+        $http({
+            method : 'DELETE',
+            url : '/estore/api/users'
+        }).then(function successCallback() {
+            $scope.refreshUsers();
+        }).catch(function errorCallback(response){
+            alert("clear all user fail");
+            console.log(response.data);
+        });
+
+    }
+
 
 
 });

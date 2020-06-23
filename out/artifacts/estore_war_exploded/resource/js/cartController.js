@@ -76,10 +76,9 @@ cartApp.controller("cartCtrl",function ($scope, $http) {
         $http({
             method : 'PUT',
             url : '/estore/api/cart/plus/' + productId
-        }).then(
-            function successCallback() {
-                $scope.refreshCart();
-            }).catch(function errorCallback(){
+        }).then(function successCallback() {
+            $scope.refreshCart();
+        }).catch(function errorCallback(){
             alert("주문 최대 수량!");
         });
     };

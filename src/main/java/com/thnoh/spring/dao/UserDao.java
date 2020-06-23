@@ -67,4 +67,13 @@ public class UserDao {
         session.flush();
 
     }
+
+    public void deleteAllUsers(){
+        List<User> userList = getAllUsers();
+
+        for(User user:userList){
+            if(!user.getAuthority().equals("ROLE_ADMIN"))
+                deleteUser(user);
+        }
+    }
 }

@@ -16,6 +16,11 @@
 
         <section class="container" ng-app="userAdminApp">
             <div ng-controller="userAdminCtrl" ng-init="initUsers('${users}')">
+
+                <a class="btn btn-warning pull-left" ng-click="clearUser()">
+                    <i class="fa fa-trash"></i> Clear Users
+                </a>
+
                 <table class="table table-hover">
                     <tr>
                         <th>Name</th>
@@ -33,9 +38,14 @@
                         <td>{{user.shippingAddress.address}}</td>
                         <td>{{user.shippingAddress.country}}</td>
                         <td>{{user.shippingAddress.zipCode}}</td>
-                        <td>{{user.authority}}</td>
+
+                        <td ng-switch on="user.authority">
+                            <div ng-switch-when="ROLE_USER">user</div>
+                            <div ng-switch-default>default</div>
+                        </td>
+
                         <td>
-                            <a class="btn btn-danger" ng-click="removeUser(user.id)">
+                            <a class="btn btn-danger" ng-click="removeUser(user.id)" style="color: white">
                                 <i class="fa fa-minus">delete</i>
                             </a>
                         </td>

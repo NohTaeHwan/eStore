@@ -62,4 +62,12 @@ public class UserRestController {
 
     }
 
+    @RequestMapping(method = RequestMethod.DELETE)
+    public ResponseEntity<Void> deleteAllUsers(){
+
+        userService.deleteAllUsers();
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }

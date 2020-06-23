@@ -83,6 +83,21 @@ cartApp.controller("cartCtrl",function ($scope, $http) {
         });
     };
 
+    $scope.minusQuantity = function(productId){
+
+        $scope.setCsrfToken();
+
+        $http({
+            method : 'PUT',
+            url : '/estore/api/cart/minus/' + productId
+        }).then(function successCallback() {
+            $scope.refreshCart();
+        }).catch(function errorCallback(response){
+            alert("이미 최저 수량입니다");
+            console.log(response.data);
+        });
+    };
+
 
     //csrf (rest 서버에 보내지는 메소드들에 추가)
     $scope.setCsrfToken = function() {

@@ -8,6 +8,8 @@ import com.thnoh.spring.service.CartItemService;
 import com.thnoh.spring.service.CartService;
 import com.thnoh.spring.service.ProductService;
 import com.thnoh.spring.service.UserService;
+import javafx.scene.shape.VLineTo;
+import org.hibernate.loader.custom.Return;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -139,6 +141,27 @@ public class CartRestController {
         }
 
         cartItem.setQuantity(cartItem.getQuantity()+1);
+        cartItem.setTotalPrice(productService.getProductById(productId).getPrice() * cartItem.getQuantity());
+        cartItemService.addCartItem(cartItem);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+
+    }
+
+    @RequestMapping(value = "/minus/{productId}",method = RequestMethod.PUT)
+    public ResponseEntity<Void> minusQuantity(@PathVariable(value = "productId") int productId){
+
+        User user = userService.getUserByUsername(getPresentUser());
+        Cart cart = user.getCart();
+
+        CartItem cartItem = cartItemService.getCartItemByProductId(cart.getId(),productId);
+
+        //Quantity > 0
+        if(cartItem.getQuantity() == 1){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        cartItem.setQuantity(cartItem.getQuantity()-1);
         cartItem.setTotalPrice(productService.getProductById(productId).getPrice() * cartItem.getQuantity());
         cartItemService.addCartItem(cartItem);
 

@@ -46,7 +46,7 @@
                               <a class="btn btn-danger" ng-click="plusQuantity(item.product.id)" style="font-size: x-small">
                                   <i class="fa fa-plus"></i>plus</a>
 
-                              <a class="btn btn-danger" style="font-size: x-small">
+                              <a class="btn btn-danger" ng-click="minusQuantity(item.product.id)"  style="font-size: x-small">
                                   <i class="fa fa-minus"></i>minus</a>
                           </div>
 

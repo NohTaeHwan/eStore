@@ -61,10 +61,17 @@
                 </c:if>
 
             </ul>
+
+            <c:if test="${pageContext.request.userPrincipal.name != 'admin' and pageContext.request.userPrincipal.name != null}">
+                <a class="nav-link" href="<c:url value="/mypage"/>">My page</a>
+            </c:if>
+
+
+            <%-- 검색창
             <form class="form-inline mt-2 mt-md-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form>--%>
         </div>
     </nav>
 </header>

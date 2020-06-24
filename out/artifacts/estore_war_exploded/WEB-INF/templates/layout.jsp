@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
+    <meta name="theme-color" content="#563d7c">
 
     <!-- Csrf meta -->
     <meta name="_csrf" content="${_csrf.token}"/>
@@ -18,6 +19,7 @@
     <title><tiles:insertAttribute name="title"/></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resource/css/bootstrap.min.css"/>" rel="stylesheet">
@@ -42,6 +44,7 @@
     <!-- Custom styles for this template -->
     <link href="<c:url value="/resource/css/carousel.css"/>" rel="stylesheet">
     <link href="<c:url value="/resource/css/main.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resource/css/dashboard.css"/>" rel="stylesheet">
 
     <!-- font awesome ver.5 CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">

@@ -48,10 +48,9 @@ userAdminApp.controller("userAdminCtrl", function ($scope,$http) {
             method : 'DELETE',
             url : '/estore/api/users'
         }).then(function successCallback() {
-            $scope.refreshUsers();
-        }).catch(function errorCallback(response){
-            alert("clear all user fail");
-            console.log(response.data);
+
+        }).catch(function errorCallback(){
+
         });
 
     }

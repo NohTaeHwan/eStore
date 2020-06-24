@@ -71,6 +71,15 @@
         <put-attribute name="body" value="/WEB-INF/views/cart.jsp" />
     </definition>
 
+    <definition name="myPage" extends="base">
+        <put-attribute name="title" value="my page" />
+        <put-attribute name="body" value="/WEB-INF/views/mypage/myPage.jsp" />
+    </definition>
+
+    <definition name="deleteAccount" extends="base">
+        <put-attribute name="title" value="my page" />
+        <put-attribute name="body" value="/WEB-INF/views/mypage/deleteAccount.jsp" />
+    </definition>
 
 
 </tiles-definitions>

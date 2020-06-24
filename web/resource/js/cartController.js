@@ -92,9 +92,9 @@ cartApp.controller("cartCtrl",function ($scope, $http) {
             url : '/estore/api/cart/minus/' + productId
         }).then(function successCallback() {
             $scope.refreshCart();
-        }).catch(function errorCallback(response){
+        }).catch(function errorCallback(){
             alert("이미 최저 수량입니다");
-            console.log(response.data);
+            //console.log(response.data);
         });
     };
 

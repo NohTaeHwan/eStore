@@ -43,5 +43,15 @@ public class MyPageController {
         return "deleteAccount";
     }
 
+    @RequestMapping(value = "/profile")
+    public String updateProfile(Model model){
+
+        User user = userService.getUserByUsername(getPresentUser());
+
+        model.addAttribute("user",user);
+
+        return "profile";
+    }
+
 
 }

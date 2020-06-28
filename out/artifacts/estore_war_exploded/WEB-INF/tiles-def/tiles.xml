@@ -81,5 +81,10 @@
         <put-attribute name="body" value="/WEB-INF/views/mypage/deleteAccount.jsp" />
     </definition>
 
+    <definition name="profile" extends="base">
+        <put-attribute name="title" value="my page" />
+        <put-attribute name="body" value="/WEB-INF/views/mypage/profile.jsp" />
+    </definition>
+
 
 </tiles-definitions>

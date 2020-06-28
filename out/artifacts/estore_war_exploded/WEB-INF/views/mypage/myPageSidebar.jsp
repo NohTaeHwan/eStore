@@ -33,7 +33,7 @@
         <ul class="nav flex-column" id="myPage_button">
             <li class="nav-item" >
                 <button class="nav-link" onclick="changeView(0)">
-                    Test1
+                    회원 정보 수정
                 </button>
             </li>
             <li class="nav-item">

@@ -9,6 +9,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<%
+    String isRedirect = request.getParameter("isRedirect");
+
+    if(isRedirect==null)
+        isRedirect = "";
+%>
+
 <div class="container-wrapper">
     <div class="container">
 
@@ -18,31 +25,48 @@
             </div>
         </div>
 
+        <% if(isRedirect.equals("true")) {%>
+            <h3 style="color: blue">회원 정보 수정완료!</h3>
+        <% } else if(isRedirect.equals("false")){%>
+            <h3 style="color: red">회원 정보 수정실패!</h3>
+        <% } %>
+
+        <sf:form action="${pageContext.request.contextPath}/updateAccount"
+                 modelAttribute="user" method="put">
 
 
-<%--
-        <sf:form action="${pageContext.request.contextPath}/admin/productInventory/updateProduct?${_csrf.parameterName}=${_csrf.token}"
-                 method="post" modelAttribute="user">
-
-            <!-- update 시에는 id값을 따로 바인딩해줘야함.그래야 맞는 id로 update가능 -->
             <sf:hidden path="id"/>
 
+            <h3>개인 정보</h3>
+
             <div class="form-group">
-                <label for="name">Name</label>
-                <sf:input path="name" id="name" class="form-control"/>
-                <sf:errors path="name" cssStyle="color:#ff0000;"/>
+                <label for="email">이메일 주소</label>
+                <sf:input path="email" id="email" class="form-control"/>
+                <sf:errors path="email" cssStyle="color: #ff0000"/>
+            </div>
+
+            <br/>
+
+            <h3>배송 정보</h3>
+
+            <div class="form-group">
+                <label for="shippingStreet">주소</label>
+                <sf:input path="shippingAddress.address" id="shippingStreet" class="form-control"/>
             </div>
 
             <div class="form-group">
-                <label for="category">Category : </label>
-                <sf:radiobutton path="category" id="category" value="컴퓨터"/> 컴퓨터
-                <sf:radiobutton path="category" id="category" value="가전"/> 가전
-                <sf:radiobutton path="category" id="category" value="잡화"/> 잡화
-                <sf:radiobutton path="category" id="category" value="자동차"/> 자동차
+                <label for="shippingCountry">국가</label>
+                <sf:input path="shippingAddress.country" id="shippingCountry" class="form-control"/>
             </div>
+
+            <div class="form-group">
+                <label for="shippingZip">우편번호</label>
+                <sf:input path="shippingAddress.zipCode" id="shippingZip" class="form-control"/>
+            </div>
+
+            <input type="submit" value="submit" class="btn btn-primary">
         </sf:form>
 
-        --%>
         <br/>
     </div>
 </div>

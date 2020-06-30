@@ -7,10 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("/api/mypage")
@@ -39,6 +37,30 @@ public class MyPageRestController {
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<User> getAccount(){
+
+        User user = userService.getUserByUsername(getPresentUser());
+
+        return new ResponseEntity<>(user,HttpStatus.OK);
+
+    }
+
+    /*
+    //TODO 항목 validation
+    @RequestMapping(method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> updateAccount(@RequestBody User user){
+
+        System.out.println("혹시 여기까지는 오니???");
+
+        userService.updateUser(user);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }*/
+
+
+
 
 
 }

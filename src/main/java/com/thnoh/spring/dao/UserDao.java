@@ -76,4 +76,12 @@ public class UserDao {
                 deleteUser(user);
         }
     }
+
+    public void updateUser(User user){
+
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(user);
+        session.flush();
+
+    }
 }

@@ -17,11 +17,13 @@ myPageApp.controller("myPageCtrl", function ($scope,$http) {
 
 
     $scope.refreshMyPage = function () {
-
+        $http.get('/estore/api/mypage').then(
+            function successCallback(response){
+                console.log(response.data);
+                $scope.user = response.data;
+            });
     };
 
-
-//TODO 회원 탈퇴에 성공하면 로그아웃 되어야함.
 
     $scope.deleteAccount = function(){
 
@@ -40,6 +42,27 @@ myPageApp.controller("myPageCtrl", function ($scope,$http) {
                 console.log(response.data);
             });
     };
+
+
+    /*
+    $scope.updateAccount = function () {
+
+        $scope.setCsrfToken();
+
+        $http({
+            method : 'PUT',
+            url : '/estore/api/mypage'
+        }).then(
+            function successCallback() {
+                alert("회원 정보 수정 성공!");
+                //refreshMyPage();
+            }, function errorCallback(response){
+                console.log(response.data);
+                alert("회원 수정 실패!");
+
+            });
+
+    }*/
 
 
 

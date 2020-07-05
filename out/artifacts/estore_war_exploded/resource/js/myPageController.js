@@ -43,27 +43,7 @@ myPageApp.controller("myPageCtrl", function ($scope,$http) {
             });
     };
 
-
-    /*
-    $scope.updateAccount = function () {
-
-        $scope.setCsrfToken();
-
-        $http({
-            method : 'PUT',
-            url : '/estore/api/mypage'
-        }).then(
-            function successCallback() {
-                alert("회원 정보 수정 성공!");
-                //refreshMyPage();
-            }, function errorCallback(response){
-                console.log(response.data);
-                alert("회원 수정 실패!");
-
-            });
-
-    }*/
-
+    
 
 
 });

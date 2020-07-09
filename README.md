@@ -75,37 +75,6 @@ version : ver 1.4
 - file-upload : 제품을 등록, 수정할 경우 제품의 사진을 등록하는 기능
 
 
-
-#### URL
-
-메인 홈  : /estore
-
-** 밑의 모든 url은 /estore뒤에 붙여서 씁니다.
-
-유저
-
-- 제품 조회 : /products
-- 제품 상세 정보 : /viewProducts/:productId
-- 장바구니 : /cart
-- 마이페이지 (v1.4)
-  - 마이페이지 메인 : /mypage
-  - 회원 정보 수정 : /mypage?pageContent=profile
-  - 회원 탈퇴 : /mypage?pageContent=deleteAccount
-
-관리자
-
-- 제품 관리 페이지 : /admin/productInventory
-- 제품 추가 : /admin/productInventory/addProduct
-- 제품 삭제 : /admin/productInventory/deleteProduct/:productId
-- 제품 업데이트 : /admin/productInventory/updateProduct/:productId
-- 유저 관리 페이지 : /admin/userAdmin 
-
-로그인 및 회원가입
-
-- 로그인 페이지 : /login
-- 회원가입 : /register
-
-
 #### REST API
 
 장바구니(/api/cart) 
@@ -124,6 +93,18 @@ version : ver 1.4
 
 - 회원 정보 수정 : PUT /updateAccount
 - 회원 탈퇴 : DELETE /api/mypage
+
+
+
+#### Model
+
+- Product 
+- Cart
+- CartItem
+- ShippingAddress
+- User
+
+[모델 구성](https://github.com/NohTaeHwan/eStore/blob/master/documents/models.md)
 
 
 
@@ -146,8 +127,6 @@ AngularJS Version : 1.8.0
 ```jsp
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 ```
-
-<br/>
 
 #### Usage
 

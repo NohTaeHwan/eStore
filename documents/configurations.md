@@ -1,5 +1,4 @@
-
-##Configurations
+## Configurations
 
 #### [spring security](https://github.com/NohTaeHwan/eStore/blob/master/web/WEB-INF/servlets/security-context.xml) (ver 1.1)
 

@@ -41,11 +41,12 @@
                     회원 탈퇴
                 </button>
             </li>
+            <!--
             <li class="nav-item">
                 <button class="nav-link" onclick="changeView(2)">
                     Test3
                 </button>
-            </li>
+            </li>  -->
         </ul>
 
     </div>

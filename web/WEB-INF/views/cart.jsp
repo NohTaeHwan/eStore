@@ -16,7 +16,7 @@
         </div>
 
         <section class="container" ng-app="cartApp" style="width: 105%">
-          <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
+          <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')" style="width: 120%">
               <a class="btn btn-warning pull-left" ng-click="clearCart()">
                   <i class="fa fa-trash"></i> Clear Cart
               </a>

@@ -155,7 +155,9 @@ AngularJS Version : 1.8.0
 - deleteAccount(DELETE) : 회원 탈퇴
 
 
-
+## Image
+<img width="792" alt="스크린샷 2020-12-16 오후 2 07 00" src="https://user-images.githubusercontent.com/29722673/102307561-1425a880-3fa8-11eb-8eb6-f2eccc15001b.png">
+<img width="792" alt="스크린샷 2020-12-16 오후 2 11 56" src="https://user-images.githubusercontent.com/29722673/102307851-b0e84600-3fa8-11eb-9a2c-7117b9668ec2.png">
 
 
 ## What's new?

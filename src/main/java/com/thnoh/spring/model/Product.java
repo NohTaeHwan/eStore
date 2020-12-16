@@ -17,7 +17,6 @@ import java.io.Serializable;
 @Table(name = "product")
 public class Product implements Serializable {
 
-
     private static final long serialVersionUID = -6073020385673702338L;
 
     @Id

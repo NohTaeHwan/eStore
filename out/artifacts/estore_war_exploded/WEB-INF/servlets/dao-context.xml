@@ -7,17 +7,17 @@
 
     <!-- aws ec2 connection-->
     <context:property-placeholder
-            location="/WEB-INF/props/ec2_jdbc.properties"/>
+            location="/WEB-INF/props/dev_jdbc.properties"/>
     <context:annotation-config></context:annotation-config>
 
     <bean id="dataSource"
           class="org.apache.commons.dbcp2.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName"
-                  value="${ec2_jdbc.driverClassName}"/>
-        <property name="url" value="${ec2_jdbc.url}"/>
-        <property name="username" value="${ec2_jdbc.username}"/>
-        <property name="password" value="${ec2_jdbc.password}"/>
+                  value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
     </bean>
 
     <context:component-scan
